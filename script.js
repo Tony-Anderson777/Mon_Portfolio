@@ -1,6 +1,5 @@
 // script.js
 
-// Function to navigate between pages (sections)
 function navigateTo(page) {
     // Hide all pages
     const pages = document.querySelectorAll('.page');
@@ -12,16 +11,35 @@ function navigateTo(page) {
         selectedPage.classList.add('selected');
     } else {
         console.error('Page not found: ' + page);
+        // Fallback to home if page not found, or handle error appropriately
+        document.getElementById('home').classList.add('selected');
+        window.history.pushState({ page: 'home' }, '', `#home`); // Update history for fallback
     }
 
+    // Update active state in navigation
+    const navLinks = document.querySelectorAll('nav ul li a.nav-link');
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${page}`) {
+            link.classList.add('active');
+        }
+    });
+
     // Use History API to update the URL without reloading
-    window.history.pushState({ page: page }, '', `#${page}`);
+    // Only push state if the page is valid and different from current state (to avoid cluttering history)
+    if (selectedPage && (window.history.state == null || window.history.state.page !== page)) {
+        window.history.pushState({ page: page }, '', `#${page}`);
+    }
 }
 
-// Event listener for the back button (to handle browser navigation)
+// Event listener for the back/forward button (to handle browser navigation)
 window.onpopstate = function(event) {
     if (event.state && event.state.page) {
         navigateTo(event.state.page);
+    } else {
+        // If no state, might be initial load or navigating to a non-tracked hash
+        const initialPage = window.location.hash.replace('#', '') || 'home';
+        navigateTo(initialPage);
     }
 };
 
@@ -30,4 +48,3 @@ window.onload = function() {
     const page = window.location.hash.replace('#', '') || 'home'; // Default to 'home' page
     navigateTo(page);
 };
-

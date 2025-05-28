@@ -3,240 +3,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
+    <title>Mon Portfolio - Tony Anderson KENYO TAYIM</title>
     <link rel="stylesheet" type="text/css" href="Style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-        header { background: #333; color: #fff; padding: 10px; text-align: center; }
-        nav ul { list-style-type: none; padding: 0; }
-        nav ul li { display: inline; margin: 0 15px; }
-        nav a { color: #fff; text-decoration: none; }
-        .page { display: none; padding: 20px; }
-        .selected { display: block; }
-        footer { background: #333; color: #fff; text-align: center; padding: 10px; position: fixed; width: 100%; bottom: 0; }
-        table, th, td { border: 1px solid #ddd; border-collapse: collapse; padding: 10px; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
-        .grid div { border: 1px solid #ccc; padding: 10px; text-align: center; }
-        .grid img { width: 100%; height: auto; }
-        form input, form select, form textarea { width: 100%; padding: 8px; margin: 10px 0; border: 1px solid #ccc; }
-        .file-row { display: flex; gap: 10px; }
-        .file-row input { flex: 1; }
-    </style>
 </head>
 <body>
 
     <header>
-		<div class="name">KENYO TAYIM Tony Anderson</div>
-		<nav>
-			<ul>
-				<li><a href="#home" onclick="navigateTo('home')">ACCUEIL</a></li>
-				<li><a href="#cv" onclick="navigateTo('cv')">CV</a></li>
-				<li><a href="#projects" onclick="navigateTo('projects')">PROJETS</a></li>
-				<li><a href="#contact" onclick="navigateTo('contact')">CONTACT</a></li>
-			</ul>
-		</nav>
-	</header>
+        <div class="name">KENYO TAYIM Tony Anderson</div>
+        <nav>
+            <ul>
+                <li><a href="#home" onclick="navigateTo('home')" class="nav-link">ACCUEIL</a></li>
+                <li><a href="#cv" onclick="navigateTo('cv')" class="nav-link">CV</a></li>
+                <li><a href="#projects" onclick="navigateTo('projects')" class="nav-link">PROJETS</a></li>
+                <li><a href="#contact" onclick="navigateTo('contact')" class="nav-link">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
 
-
-    <!-- Accueil Page -->
     <div class="page selected" id="home">
-        <section class="me">
-            <div class="photo">
-                <img src="https://image.noelshack.com/fichiers/2024/49/3/1733306988-bg.jpg" alt="Photo de moi" style="width: 200px;">
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Tony Anderson KENYO TAYIM</h1>
+                <p class="subtitle">Étudiant en Bachelor IA & Passionné de Technologie</p>
+                <p class="p1">Je suis un étudiant en Bachelor IA de 17 ans, titulaire d'un Baccalauréat scientifique spécialité maths-physique. Passionné par le dessin, l'informatique et les nouvelles technologies, je suis toujours à la recherche de nouveaux défis et apprentissages.</p>
+                <a href="#projects" onclick="navigateTo('projects')" class="cta-button">Découvrir mes projets</a>
             </div>
-            <div class="moi">
-                <h2>A propos de moi</h2>
-                <p class="p1">Je suis un étudiant en Bachelor IA , titulaire d'un Baccalauréat scientifiques spécialité maths-physique. j'ai 17 ans et je suis passionné de dessin , d'informatiques et de nouvelles technologies .</p>
+            <div class="hero-image">
+                <img src="https://image.noelshack.com/fichiers/2024/49/3/1733306988-bg.jpg" alt="Photo de Tony Anderson KENYO TAYIM">
             </div>
         </section>
-        <section class="one">
-            <h2>Mes compétences</h2>
-            <h3 class="two">Compétences pratiques</h3>
-        </section>
-        <section>
-            <div class="container">
-                <div class="grey">
+
+        <section class="skills-section">
+            <h2>Mes Compétences</h2>
+            <h3>Compétences Techniques</h3>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <h4>Développement Web & Logiciel</h4>
                     <ul>
-                        <li>Maîtrise des languges de code tel que: le html, css , c++ ,c  et le javascript , Python , Java et Sql</li>
-                        <li>Capable de créer des pages web</li>
+                        <li>Langages: HTML, CSS, JavaScript, Python, C++, C, Java, SQL</li>
+                        <li>Frameworks/Librairies: (À ajouter si applicable, ex: React, Node.js)</li>
+                        <li>Outils: VS Code, Eclipse, Git</li>
                     </ul>
                 </div>
-				<div class="grey">
+                <div class="skill-card">
+                    <h4>Gestion de Projet & Outils</h4>
                     <ul>
-                        <li>Maîtrise des méthodes de gestion de projet tel que: le Kanban </li>
+                        <li>Méthodologies: Kanban</li>
+                        <li>Logiciels: Excel, Word</li>
                         <li>Maîtrise d'outils électroniques</li>
                     </ul>
                 </div>
-				<div class="grey">
+                <div class="skill-card">
+                    <h4>Langues & Divers</h4>
                     <ul>
-                        <li>Maitrise approfondie de la langue Anglaise </li>
-                        <li>Maîtrise de logiciel tel que : Excel , Word ,Visual studio code , eclipse</li>
+                        <li>Anglais: Maîtrise approfondie</li>
+                        <li>(Autres langues ou compétences spécifiques)</li>
                     </ul>
                 </div>
             </div>
-			
-		    <h3 class="two">Compétences méta</h3>
-		<div class="container">
-                <div class="grey">
+
+            <h3>Compétences Personnelles (Soft Skills)</h3>
+            <div class="skills-container">
+                <div class="skill-card">
                     <ul>
-                        <li>Compétent dans la gestion de projet</li>
-                        <li>Capable de coordonée une équipe</li>
-					</ul>
-                </div>
-				<div class="grey">
-                    <ul>
-                        <li>Expérimenté dans la rédaction de rapport proffessionel</li>
-                        <li>Dessinateur</li>
+                        <li>Gestion de projet efficace</li>
+                        <li>Coordination d'équipe</li>
+                        <li>Esprit d'analyse et résolution de problèmes</li>
                     </ul>
                 </div>
-				<div class="grey">
+                <div class="skill-card">
                     <ul>
-                        <li>Très sociable</li>
-                        <li>Ouvert aux débats constructif qui font évoluer le groupe</li>
+                        <li>Rédaction de rapports professionnels</li>
+                        <li>Créativité (Dessinateur)</li>
+                        <li>Excellente communication</li>
                     </ul>
                 </div>
-		</section>
-        </div>
+                <div class="skill-card">
+                    <ul>
+                        <li>Très sociable et bon relationnel</li>
+                        <li>Ouverture aux débats constructifs</li>
+                        <li>Adaptabilité et curiosité</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </div>
 
-    <!-- CV Page -->
     <div class="page" id="cv">
-        <h2>Mon CV</h2>
-
-        
-        <table>
-            <tr>
-                <th>Entreprise</th>
-                <th>Poste</th>
-                <th>Années</th>
-                <th>Lieu</th>
-            </tr>
-            <tr>
-                <td>JustBeautiful by Fely</td>
-                <td>Assistant coiffeur</td>
-                <td>2020-2021</td>
-                <td>GABON</td>
-            </tr>
-            <tr>
-                <td>Cyber Cafée</td>
-                <td>Responsable Accueil</td>
-                <td>2023-2024</td>
-                <td>GABON</td>
-            </tr>
-        </table>
-
-        <div class="cv">
-            <img src="https://www.noelshack.com/2025-07-3-1739355049-cv-img.jpg" alt="CV ProStage" title="photocv"/>
+    <h2>Mon CV</h2>
+    <div class="cv-content">
+        <div class="experience-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Entreprise</th>
+                        <th>Poste</th>
+                        <th>Périodes</th>
+                        <th>Lieu</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>JustBeautiful by Fely</td>
+                        <td>Assistant coiffeur</td>
+                        <td> Juin 2024 - Septembre 2023</td>
+                        <td>GABON</td>
+                    </tr>
+                    <tr>
+                        <td>Cyber Cafée</td>
+                        <td>Responsable Accueil</td>
+                        <td>Juin 2024 - Septembre 2024</td>
+                        <td>GABON</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
+        <div class="cv-display-area">
+    <h3>Visualisation du CV</h3>
+    <iframe src="MonCV.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH" width="100%" height="920px" style="border: none;"></iframe>
+    <p style="text-align:center; margin-top:10px;">
+        Si vous ne pouvez pas visualiser le PDF ci-dessus, vous pouvez le
+        <a href="MonCV.pdf" target="_blank" download="CV_Tony_Anderson_KENYO_TAYIM.pdf">télécharger directement</a>.
+    </p>
+</div>
     </div>
+    <div class="cv-download">
+        <a href="MonCV.pdf" target="_blank" download="CV_Tony_Anderson_KENYO_TAYIM.pdf" class="cta-button">Télécharger mon CV</a>   
+    </div>
+</div>
 
-    <!-- Projets Page -->
     <div class="page" id="projects">
         <h2>Mes Projets</h2>
-        <div class="grid">
-            <div class="p1">
-                <img src="https://image.noelshack.com/minis/2025/07/4/1739436072-accueil-portfolio-img.png"  alt="projet 1"-accueil-portfolio-img.jpg"/></a>
-                <h3>Portfolio</h3>
-                <p>Porfolio codé en HTML , CSS et JavaScript</p>
-                <a href="https://lien-du-projet1.com" target="_blank">Voir le projet</a>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="https://image.noelshack.com/minis/2025/07/4/1739436072-accueil-portfolio-img.png" alt="Projet Portfolio"/>
+                <h3>Mon Portfolio</h3>
+                <p>Ce site portfolio, codé en HTML, CSS et JavaScript, présentant mes compétences et projets.</p>
+                <a href="https://mon-portfolio-tony.netlify.app/" onclick="navigateTo('home')" target="_blank" class="project-link">Voir le projet actuel</a>
             </div>
-
-            <div class="p2">
-                <img src="https://europe1.discourse-cdn.com/arduino/original/3X/a/e/ae375e506442f26e256d7873022e3453560866d7.png" alt="Projet 3">
+            <div class="project-card">
+                <img src="https://europe1.discourse-cdn.com/arduino/original/3X/a/e/ae375e506442f26e256d7873022e3453560866d7.png" alt="Projet Chronomètre Arduino">
                 <h3>Chronomètre Arduino</h3>
-                <p>Chonomètre codé au langange C++ et fonctionnant à l'aide de servomoteurs et boutons de poussoirs .</p>
-                <a href="https://lien-du-projet3.com" target="_blank">Voir le projet</a>
-            </div>
-
-            <div class="p3">
-                <img src="https://th.bing.com/th/id/OIP.W7tXK2NT-5a9TWzG4AeYfQAAAA?rs=1&pid=ImgDetMain" alt="Projet 2">
+                <p>Chronomètre réalisé avec Arduino, programmé en C++, utilisant servomoteurs et boutons poussoirs.</p>
+                <a href="#" target="_blank" class="project-link">Lien à venir</a> </div>
+            <div class="project-card">
+                <img src="https://th.bing.com/th/id/OIP.W7tXK2NT-5a9TWzG4AeYfQAAAA?rs=1&pid=ImgDetMain" alt="Projet CesiBikeGesti">
                 <h3>CesiBikeGesti</h3>
-                <p> Il s'agit comme son nom l'indique d'un Gestionnaire de données qui permet la gestion de postes dans une entreprise c'est à dire que par poste il est possible de saisir le rôle de ce poste, le nombre et le nom des pièces utilisées et qu'on peut ajouté ou supprimé autant de postes qu'on veut.</p>
-                <a href="https://lien-du-projet2.com" target="_blank">Voir le projet</a>
+                <p>Gestionnaire de données pour la gestion de postes dans une entreprise (rôles, pièces utilisées, ajout/suppression).</p>
+                 <a href="#" target="_blank" class="project-link">Lien à venir</a>
             </div>
-
-            <div class="p4">
-                <img src="https://cdn.pixabay.com/photo/2017/05/04/16/37/meeting-2284501_1280.jpg" alt="Projet 3">
-                <h3>Paimon</h3>
-                <p>Jeux vidéo 2D codé en Python avec pygame qui permet de jouer au jeu Paimon. </p>
-                <a href="https://lien-du-projet3.com" target="_blank">Voir le projet</a>
+            <div class="project-card">
+                <img src="https://cdn.pixabay.com/photo/2017/05/04/16/37/meeting-2284501_1280.jpg" alt="Projet Paimon">
+                <h3>Paimon Game</h3>
+                <p>Jeu vidéo 2D développé en Python avec la librairie Pygame.</p>
+                 <a href="#" target="_blank" class="project-link">Lien à venir</a>
             </div>
-
         </div>
     </div>
 
-    <!-- Contact Page -->
     <div class="page" id="contact">
-        <h2>Contact</h2>
+        <h2>Contactez-moi</h2>
         <form id="contact-form">
-            <label for="nom">Nom</label>
-            <input type="text" id="nom" name="nom" required>
-
-            <label for="prenom">Prénom</label>
-            <input type="text" id="prenom" name="prenom" required>
-
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="objet">Objet</label>
-            <select id="objet" name="objet" required>
-                <option value="proposition_embauche">Proposition d’embauche</option>
-                <option value="formation">Formation</option>
-                <option value="devis_creation_site">Devis création de site web</option>
-            </select>
-
-            <label for="fichier">Fichier</label>
-            <input type="file" id="fichier" name="fichier">
-
-            <button type="button" onclick="addFileRow()">Ajouter un fichier</button>
-
-            <div id="file-rows"></div>
-
-            <label for="recontact">Voulez-vous être recontacté par mail ?</label>
-            <input type="checkbox" id="recontact" name="recontact">
-
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4"></textarea>
-
-            <button type="submit">Envoyer</button>
+            <div class="form-group">
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" required>
+            </div>
+            <div class="form-group">
+                <label for="prenom">Prénom</label>
+                <input type="text" id="prenom" name="prenom" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="objet">Objet</label>
+                <select id="objet" name="objet" required>
+                    <option value="" disabled selected>Choisissez un objet...</option>
+                    <option value="proposition_embauche">Proposition d’embauche</option>
+                    <option value="formation">Formation</option>
+                    <option value="devis_creation_site">Devis création de site web</option>
+                    <option value="autre">Autre</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <div class="form-group file-input-area">
+                <label for="fichier">Ajouter un fichier (optionnel)</label>
+                <input type="file" id="fichier" name="fichier">
+                </div>
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="recontact" name="recontact">
+                <label for="recontact">Voulez-vous être recontacté par mail ?</label>
+            </div>
+            <button type="submit" class="cta-button">Envoyer le Message</button>
         </form>
     </div>
 
     <footer>
-        <p>Contactez-moi : xandersteelparker77@gmail.com | Téléphone : 0618614497</p>
+        <p><i class="bi bi-envelope-fill"></i> tonyandersonkenyotayim@gmail.com | <i class="bi bi-telephone-fill"></i> 06 18 61 44 97</p>
         <p>
-			<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-			<i class="bi bi-gitlab"></i>
-            <a href="https://gitlab.com/xandersteelparker77" target="_blank">GitLab</a>
-        </p>
+            <a href="https://gitlab.com/xandersteelparker77" target="_blank" title="Mon GitLab">
+                <i class="bi bi-gitlab"></i> GitLab
+            </a>
+            </p>
+        <p>&copy; 2024 Tony Anderson KENYO TAYIM. Tous droits réservés.</p>
     </footer>
 
+    <script src="script.js"></script>
     <script>
-        function navigateTo(page) {
-            const pages = document.querySelectorAll('.page');
-            pages.forEach(p => {
-                p.classList.remove('selected');
-            });
-            document.getElementById(page).classList.add('selected');
-        }
+        // Basic form submission handler (optional, for front-end feedback)
+        // For actual email sending, you'd need a backend or a service like EmailJS
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent actual submission for this demo
+            alert('Message envoyé (simulation) ! Merci de m\'avoir contacté.');
+            this.reset(); // Reset the form
+        });
 
-        function addFileRow() {
-            const fileRowsContainer = document.getElementById('file-rows');
-            const fileRow = document.createElement('div');
-            fileRow.classList.add('file-row');
-            fileRow.innerHTML = `
-                <input type="file" name="fichier">
-                <button type="button" onclick="removeFileRow(this)">Supprimer</button>
-            `;
-            fileRowsContainer.appendChild(fileRow);
-        }
-
-        function removeFileRow(button) {
-            button.parentElement.remove();
-        }
+        // Any JS for file handling if needed (addFileRow, removeFileRow) can go here or in script.js
+        // For simplicity, the current HTML has one file input.
+        // If you need addFileRow/removeFileRow, ensure they are defined.
     </script>
-
 </body>
 </html>
