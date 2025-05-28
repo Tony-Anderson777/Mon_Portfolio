@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="Style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header { background: #333; color: #fff; padding: 10px; text-align: center; }
+        nav ul { list-style-type: none; padding: 0; }
+        nav ul li { display: inline; margin: 0 15px; }
+        nav a { color: #fff; text-decoration: none; }
+        .page { display: none; padding: 20px; }
+        .selected { display: block; }
+        footer { background: #333; color: #fff; text-align: center; padding: 10px; position: fixed; width: 100%; bottom: 0; }
+        table, th, td { border: 1px solid #ddd; border-collapse: collapse; padding: 10px; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+        .grid div { border: 1px solid #ccc; padding: 10px; text-align: center; }
+        .grid img { width: 100%; height: auto; }
+        form input, form select, form textarea { width: 100%; padding: 8px; margin: 10px 0; border: 1px solid #ccc; }
+        .file-row { display: flex; gap: 10px; }
+        .file-row input { flex: 1; }
+    </style>
+</head>
+<body>
+
+    <header>
+		<div class="name">KENYO TAYIM Tony Anderson</div>
+		<nav>
+			<ul>
+				<li><a href="#home" onclick="navigateTo('home')">ACCUEIL</a></li>
+				<li><a href="#cv" onclick="navigateTo('cv')">CV</a></li>
+				<li><a href="#projects" onclick="navigateTo('projects')">PROJETS</a></li>
+				<li><a href="#contact" onclick="navigateTo('contact')">CONTACT</a></li>
+			</ul>
+		</nav>
+	</header>
+
+
+    <!-- Accueil Page -->
+    <div class="page selected" id="home">
+        <section class="me">
+            <div class="photo">
+                <img src="https://image.noelshack.com/fichiers/2024/49/3/1733306988-bg.jpg" alt="Photo de moi" style="width: 200px;">
+            </div>
+            <div class="moi">
+                <h2>A propos de moi</h2>
+                <p class="p1">Je suis un étudiant en Bachelor IA , titulaire d'un Baccalauréat scientifiques spécialité maths-physique. j'ai 17 ans et je suis passionné de dessin , d'informatiques et de nouvelles technologies .</p>
+            </div>
+        </section>
+        <section class="one">
+            <h2>Mes compétences</h2>
+            <h3 class="two">Compétences pratiques</h3>
+        </section>
+        <section>
+            <div class="container">
+                <div class="grey">
+                    <ul>
+                        <li>Maîtrise des languges de code tel que: le html, css , c++ ,c  et le javascript , Python , Java et Sql</li>
+                        <li>Capable de créer des pages web</li>
+                    </ul>
+                </div>
+				<div class="grey">
+                    <ul>
+                        <li>Maîtrise des méthodes de gestion de projet tel que: le Kanban </li>
+                        <li>Maîtrise d'outils électroniques</li>
+                    </ul>
+                </div>
+				<div class="grey">
+                    <ul>
+                        <li>Maitrise approfondie de la langue Anglaise </li>
+                        <li>Maîtrise de logiciel tel que : Excel , Word ,Visual studio code , eclipse</li>
+                    </ul>
+                </div>
+            </div>
+			
+		    <h3 class="two">Compétences méta</h3>
+		<div class="container">
+                <div class="grey">
+                    <ul>
+                        <li>Compétent dans la gestion de projet</li>
+                        <li>Capable de coordonée une équipe</li>
+					</ul>
+                </div>
+				<div class="grey">
+                    <ul>
+                        <li>Expérimenté dans la rédaction de rapport proffessionel</li>
+                        <li>Dessinateur</li>
+                    </ul>
+                </div>
+				<div class="grey">
+                    <ul>
+                        <li>Très sociable</li>
+                        <li>Ouvert aux débats constructif qui font évoluer le groupe</li>
+                    </ul>
+                </div>
+		</section>
+        </div>
+    </div>
+
+    <!-- CV Page -->
+    <div class="page" id="cv">
+        <h2>Mon CV</h2>
+
+        
+        <table>
+            <tr>
+                <th>Entreprise</th>
+                <th>Poste</th>
+                <th>Années</th>
+                <th>Lieu</th>
+            </tr>
+            <tr>
+                <td>JustBeautiful by Fely</td>
+                <td>Assistant coiffeur</td>
+                <td>2020-2021</td>
+                <td>GABON</td>
+            </tr>
+            <tr>
+                <td>Cyber Cafée</td>
+                <td>Responsable Accueil</td>
+                <td>2023-2024</td>
+                <td>GABON</td>
+            </tr>
+        </table>
+
+        <div class="cv">
+            <img src="https://www.noelshack.com/2025-07-3-1739355049-cv-img.jpg" alt="CV ProStage" title="photocv"/>
+        </div>
+
+    </div>
+
+    <!-- Projets Page -->
+    <div class="page" id="projects">
+        <h2>Mes Projets</h2>
+        <div class="grid">
+            <div class="p1">
+                <img src="https://image.noelshack.com/minis/2025/07/4/1739436072-accueil-portfolio-img.png"  alt="projet 1"-accueil-portfolio-img.jpg"/></a>
+                <h3>Portfolio</h3>
+                <p>Porfolio codé en HTML , CSS et JavaScript</p>
+                <a href="https://lien-du-projet1.com" target="_blank">Voir le projet</a>
+            </div>
+
+            <div class="p2">
+                <img src="https://europe1.discourse-cdn.com/arduino/original/3X/a/e/ae375e506442f26e256d7873022e3453560866d7.png" alt="Projet 3">
+                <h3>Chronomètre Arduino</h3>
+                <p>Chonomètre codé au langange C++ et fonctionnant à l'aide de servomoteurs et boutons de poussoirs .</p>
+                <a href="https://lien-du-projet3.com" target="_blank">Voir le projet</a>
+            </div>
+
+            <div class="p3">
+                <img src="https://th.bing.com/th/id/OIP.W7tXK2NT-5a9TWzG4AeYfQAAAA?rs=1&pid=ImgDetMain" alt="Projet 2">
+                <h3>CesiBikeGesti</h3>
+                <p> Il s'agit comme son nom l'indique d'un Gestionnaire de données qui permet la gestion de postes dans une entreprise c'est à dire que par poste il est possible de saisir le rôle de ce poste, le nombre et le nom des pièces utilisées et qu'on peut ajouté ou supprimé autant de postes qu'on veut.</p>
+                <a href="https://lien-du-projet2.com" target="_blank">Voir le projet</a>
+            </div>
+
+            <div class="p4">
+                <img src="https://cdn.pixabay.com/photo/2017/05/04/16/37/meeting-2284501_1280.jpg" alt="Projet 3">
+                <h3>Paimon</h3>
+                <p>Jeux vidéo 2D codé en Python avec pygame qui permet de jouer au jeu Paimon. </p>
+                <a href="https://lien-du-projet3.com" target="_blank">Voir le projet</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Contact Page -->
+    <div class="page" id="contact">
+        <h2>Contact</h2>
+        <form id="contact-form">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="prenom">Prénom</label>
+            <input type="text" id="prenom" name="prenom" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="objet">Objet</label>
+            <select id="objet" name="objet" required>
+                <option value="proposition_embauche">Proposition d’embauche</option>
+                <option value="formation">Formation</option>
+                <option value="devis_creation_site">Devis création de site web</option>
+            </select>
+
+            <label for="fichier">Fichier</label>
+            <input type="file" id="fichier" name="fichier">
+
+            <button type="button" onclick="addFileRow()">Ajouter un fichier</button>
+
+            <div id="file-rows"></div>
+
+            <label for="recontact">Voulez-vous être recontacté par mail ?</label>
+            <input type="checkbox" id="recontact" name="recontact">
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>Contactez-moi : xandersteelparker77@gmail.com | Téléphone : 0618614497</p>
+        <p>
+			<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+			<i class="bi bi-gitlab"></i>
+            <a href="https://gitlab.com/xandersteelparker77" target="_blank">GitLab</a>
+        </p>
+    </footer>
+
+    <script>
+        function navigateTo(page) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(p => {
+                p.classList.remove('selected');
+            });
+            document.getElementById(page).classList.add('selected');
+        }
+
+        function addFileRow() {
+            const fileRowsContainer = document.getElementById('file-rows');
+            const fileRow = document.createElement('div');
+            fileRow.classList.add('file-row');
+            fileRow.innerHTML = `
+                <input type="file" name="fichier">
+                <button type="button" onclick="removeFileRow(this)">Supprimer</button>
+            `;
+            fileRowsContainer.appendChild(fileRow);
+        }
+
+        function removeFileRow(button) {
+            button.parentElement.remove();
+        }
+    </script>
+
+</body>
+</html>

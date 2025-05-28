@@ -1,0 +1,134 @@
+body {
+    margin: 20px; 
+    padding: 20px;
+    background-color:lightgrey;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+div.name{
+    padding: 10px;
+    margin: 10px;
+    font-size: 14px;
+    font-family:Verdana, Tahoma, sans-serif;
+}
+
+nav ul li{
+    list-style-type: none;
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+}
+
+
+ul li a{
+    letter-spacing: 0.1rem;
+    color:azure;
+    font-family:Verdana, Tahoma, sans-serif;
+    
+}
+    
+
+ul li a:hover{
+   color:darkcyan;
+    text-decoration: underline;
+}  
+
+section.me{
+    display: flex;
+    justify-content:space-evenly;
+    flex: 1;
+}
+
+h2 {
+    color:azure;
+    background-color:#343838;
+    text-transform: uppercase;
+    font-style: italic;
+    border-radius: 20px;
+    text-align: center;
+}
+
+h2.light {
+    color:azure;
+    background-color:#343838;
+    border: 1px solid:lightgrey;
+    border-radius: 20px;
+}
+
+.p1{
+    text-align: center;
+    text-decoration: solid;
+    font-family:Arial, Helvetica, sans-serif ;
+}
+
+h3.two{
+    color: azure;
+    background-color:#343838;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    text-align: center;
+    font-style: italic;
+}
+
+.photo img{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    border-radius: 50%;
+    border: 10px solid#fff;
+}
+
+div.moi {
+    color:#343838;
+       
+}
+
+.container{
+    display:grid;
+    height:200px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.grey{
+    color: azure;
+    background:#343838;
+    height: 200px;
+    border-radius: 20px;
+}
+.table{
+    display: block;
+}  
+div.p1{
+    color: azure;
+    background-color: #343838;
+    border-radius: 20px;
+    justify-content: space-between;
+}
+
+div.p2{
+    color: azure;
+    background-color: #343838;
+    border-radius: 20px;
+    justify-content: space-between;
+}
+
+div.p3{
+    color: azure;
+    background-color: #343838;
+    border-radius: 20px;
+    justify-content: space-between;
+}
+
+div.p4{
+    color: azure;
+    background-color: #343838;
+    border-radius: 20px;
+    justify-content: space-between;
+}
