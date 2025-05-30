@@ -48,3 +48,23 @@ window.onload = function() {
     const page = window.location.hash.replace('#', '') || 'home'; // Default to 'home' page
     navigateTo(page);
 };
+
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Empêche la soumission HTML normale
+
+    const myForm = event.target;
+    const formData = new FormData(myForm);
+
+    fetch("/", { // L'action du formulaire peut aussi être utilisée ici si définie
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" }, // Netlify attend ce type de contenu pour les soumissions AJAX
+        body: new URLSearchParams(formData).toString(),
+    })
+    .then(() => {
+        alert("Message envoyé avec succès ! Merci de m'avoir contacté.");
+        myForm.reset(); // Réinitialise le formulaire
+        // Optionnel: masquer le formulaire et afficher un message de remerciement permanent sur la page
+    })
+    .catch((error) => alert("Erreur lors de l'envoi du message: " + error));
+});

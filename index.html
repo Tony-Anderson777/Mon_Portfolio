@@ -135,8 +135,11 @@
     </div>
 </div>
 
+
+<!-- Page pour afficher les projets -->
+
     <div class="page" id="projects">
-        <h2>Mes Projets</h2>
+        <h2>Mes Projets</h2> 
         <div class="projects-grid">
             <div class="project-card">
                 <img src="https://image.noelshack.com/minis/2025/07/4/1739436072-accueil-portfolio-img.png" alt="Projet Portfolio"/>
@@ -188,9 +191,17 @@
         </div>
     </div>
 
-    <div class="page" id="contact">
+
+    <!-- Page pour le contact -->
+   <div class="page" id="contact">
         <h2>Contactez-moi</h2>
-        <form id="contact-form">
+        <form name="contact" id="contact-form" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+            <p class="hidden" style="display:none;">
+                <label>Ne pas remplir si vous êtes humain : <input name="bot-field"></label>
+            </p>
+            <form name="contact" id="contact-form" method="POST" data-netlify="true" action="/merci.html" data-netlify-honeypot="bot-field"></form>
+    
+
             <div class="form-group">
                 <label for="nom">Nom</label>
                 <input type="text" id="nom" name="nom" required>
@@ -219,8 +230,7 @@
             </div>
             <div class="form-group file-input-area">
                 <label for="fichier">Ajouter un fichier (optionnel)</label>
-                <input type="file" id="fichier" name="fichier">
-                </div>
+                <input type="file" id="fichier" name="fichier"> </div>
             <div class="form-group checkbox-group">
                 <input type="checkbox" id="recontact" name="recontact">
                 <label for="recontact">Voulez-vous être recontacté par mail ?</label>
@@ -230,14 +240,22 @@
     </div>
 
     <footer>
-        <p><i class="bi bi-envelope-fill"></i> tonyandersonkenyotayim@gmail.com | <i class="bi bi-telephone-fill"></i> 06 18 61 44 97</p>
-        <p>
-            <a href="https://gitlab.com/xandersteelparker77" target="_blank" title="Mon GitLab">
-                <i class="bi bi-gitlab"></i> GitLab
-            </a>
-            </p>
-        <p>&copy; 2024 Tony Anderson KENYO TAYIM. Tous droits réservés.</p>
-    </footer>
+    
+    <p>
+        <!-- permet de de rendre mon email cliquable et d'ouvrir directement l'application de messagerie par défaut de l'utilsateur avec mon adresse mail comme destinataire -->
+
+        <i class="bi bi-envelope-fill"></i>
+        <a href="mailto:tonyandersonkenyotayim@gmail.com">tonyandersonkenyotayim@gmail.com</a>
+        | <i class="bi bi-telephone-fill"></i> 06 18 61 44 97
+    </p>
+    
+    <p>
+        <a href="https://github.com/Tony-Anderson777" target="_blank" title="Mon GitHub">
+            <i class="bi bi-github"></i> GitHub
+        </a>
+    </p>
+    <p>&copy; 2024 Tony Anderson KENYO TAYIM. Tous droits réservés.</p>
+</footer>
 
     <script src="script.js"></script>
     <script>
