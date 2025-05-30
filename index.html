@@ -195,47 +195,50 @@
     <!-- Page pour le contact -->
    <div class="page" id="contact">
         <h2>Contactez-moi</h2>
-        <form name="contact" id="contact-form" method="POST" data-netlify="true" action="/merci.html" data-netlify-honeypot="bot-field">
-            <p class="hidden" style="display:none;">
-                <label>Ne pas remplir si vous êtes humain : <input name="bot-field"></label>
-            </p>            
-    
+       <form name="contact"
+      id="contact-form"
+      method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      enctype="multipart/form-data">  <p class="hidden" style="display:none;">
+        <label>Ne pas remplir si vous êtes humain : <input name="bot-field"></label>
+    </p>
 
-            <div class="form-group">
-                <label for="nom">Nom</label>
-                <input type="text" id="nom" name="nom" required>
-            </div>
-            <div class="form-group">
-                <label for="prenom">Prénom</label>
-                <input type="text" id="prenom" name="prenom" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="objet">Objet</label>
-                <select id="objet" name="objet" required>
-                    <option value="" disabled selected>Choisissez un objet...</option>
-                    <option value="proposition_embauche">Proposition d’embauche</option>
-                    <option value="formation">Formation</option>
-                    <option value="devis_creation_site">Devis création de site web</option>
-                    <option value="autre">Autre</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            <div class="form-group file-input-area">
-                <label for="fichier">Ajouter un fichier (optionnel)</label>
-                <input type="file" id="fichier" name="fichier"> </div>
-            <div class="form-group checkbox-group">
-                <input type="checkbox" id="recontact" name="recontact">
-                <label for="recontact">Voulez-vous être recontacté par mail ?</label>
-            </div>
-            <button type="submit" class="cta-button">Envoyer le Message</button>
-        </form>
+    <div class="form-group">
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" name="nom" required>
+    </div>
+    <div class="form-group">
+        <label for="prenom">Prénom</label>
+        <input type="text" id="prenom" name="prenom" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+        <label for="objet">Objet</label>
+        <select id="objet" name="objet" required>
+            <option value="" disabled selected>Choisissez un objet...</option>
+            <option value="proposition_embauche">Proposition d’embauche</option>
+            <option value="formation">Formation</option>
+            <option value="devis_creation_site">Devis création de site web</option>
+            <option value="autre">Autre</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+    <div class="form-group file-input-area">
+        <label for="fichier">Ajouter un fichier (optionnel)</label>
+        <input type="file" id="fichier" name="fichier"> </div>
+    <div class="form-group checkbox-group">
+        <input type="checkbox" id="recontact" name="recontact">
+        <label for="recontact">Voulez-vous être recontacté par mail ?</label>
+    </div>
+    <button type="submit" class="cta-button">Envoyer le Message</button>
+</form>
     </div>
 
     <footer>

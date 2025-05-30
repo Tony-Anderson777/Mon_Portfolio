@@ -56,15 +56,41 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     const myForm = event.target;
     const formData = new FormData(myForm);
 
-    fetch("/", { // L'action du formulaire peut aussi être utilisée ici si définie
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" }, // Netlify attend ce type de contenu pour les soumissions AJAX
-        body: new URLSearchParams(formData).toString(),
-    })
-    .then(() => {
-        alert("Message envoyé avec succès ! Merci de m'avoir contacté.");
-        myForm.reset(); // Réinitialise le formulaire
-        // Optionnel: masquer le formulaire et afficher un message de remerciement permanent sur la page
-    })
-    .catch((error) => alert("Erreur lors de l'envoi du message: " + error));
+    // NOUVELLE VERSION AJAX (CORRECTE POUR LES FICHIERS)
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const myForm = event.target;
+        const formData = new FormData(myForm); // FormData gère automatiquement les fichiers
+
+        fetch("/", { // Ou myForm.action si vous avez défini une action
+            method: "POST",
+            // PAS D'EN-TÊTE Content-Type ICI, le navigateur s'en charge
+            body: formData, // Envoyez directement l'objet FormData
+        })
+        .then(response => {
+            if (response.ok) {
+                alert("Message envoyé avec succès ! Merci de m'avoir contacté.");
+                myForm.reset();
+            } else {
+                // Gérer les erreurs de réponse (ex: Netlify renvoie une erreur)
+                response.json().then(data => {
+                    if (data && data.error) {
+                        alert("Erreur de la part du serveur : " + data.error);
+                    } else {
+                        alert("Erreur lors de l'envoi du message. Code: " + response.status);
+                    }
+                }).catch(() => {
+                    alert("Erreur lors de l'envoi du message. Code: " + response.status);
+                });
+            }
+        })
+        .catch((error) => {
+            console.error("Erreur réseau lors de l'envoi du message:", error);
+            alert("Erreur réseau lors de l'envoi du message. Veuillez vérifier votre connexion.");
+        });
+    });
+}
 });
